@@ -1,9 +1,12 @@
-import { Box, Icon, Flex, UnorderedList, ListItem, Image, Input, InputGroup, InputRightElement, Button, Avatar, HStack, VStack, Spacer } from '@chakra-ui/react';
+import {
+    Box, Icon, Flex, UnorderedList, ListItem, Image, Input, InputGroup, InputRightElement,
+    Button, Avatar, HStack, VStack, Spacer, Divider, Stack, StackDivider, Heading
+} from '@chakra-ui/react';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FiSearch } from "react-icons/fi"
 import { BiNews } from "react-icons/bi"
-import { MdAdd, MdExplore } from "react-icons/md"
+import { MdAdd, MdExplore, MdHelp, MdSettings } from "react-icons/md"
 import HeaderLogo from "../Assests/Images/header-logo.png"
 import UserAvatar from "../Assests/Images/user-avatar.png"
 import { GrServicePlay } from "react-icons/gr"
@@ -13,15 +16,19 @@ import { GiNetworkBars } from "react-icons/gi"
 
 export function SideBar() {
     return (
-        <Box>
+        <Box position='sticky'>
             <Flex direction='column' gap='5' justify='center' align='center' w='7em' p='3em'>
-                <Icon color='#1F50FF' w='2.5em' h='2.5em' as={MdExplore} />
+                <Icon color='#1F50FF' w='2.5em' h='2em' as={MdExplore} />
                 <Spacer />
-                <Icon  w='2.5em' h='2.5em' as={GiNetworkBars} />
+                <Icon w='2em' color='#D9D6D9' h='2em' as={GiNetworkBars} />
                 <Spacer />
-                <Icon  w='2.5em' h='2.5em' as={GrServicePlay} />
+                <Icon w='2em' h='2em' as={GrServicePlay} />
                 <Spacer />
-                <Icon  w='2.5em' h='2.5em' as={BiNews} />
+                <Icon w='2em' h='2em' as={BiNews} />
+                <Spacer />
+                <Icon w='2em' h='2em' as={MdSettings} />
+                <Divider />
+                <Icon w='2em' h='2em' as={MdHelp} />
             </Flex>
         </Box>
     )
@@ -58,5 +65,7 @@ export default function Navigation() {
         </Box>
     )
 }
+
+
 
 
