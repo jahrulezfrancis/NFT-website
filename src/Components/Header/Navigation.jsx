@@ -1,6 +1,6 @@
 import {
     Box, Icon, Flex, UnorderedList, ListItem, Image, Input, InputGroup, InputRightElement,
-    Button, Avatar, HStack, VStack, Spacer, Divider, Stack, StackDivider, Heading
+    Button, Avatar, HStack, VStack, Spacer, Divider, Stack, StackDivider, Heading, useMediaQuery
 } from '@chakra-ui/react';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
@@ -15,8 +15,9 @@ import { GiNetworkBars } from "react-icons/gi"
 
 
 export function SideBar() {
+    const [isMobileDevice] = useMediaQuery('(max-width: 1000px)')
     return (
-        <Box position='fixed' top='4em' zIndex='2'>
+        <Box position='fixed' top='4em' zIndex='2' display={isMobileDevice ? 'none' : 'block'}>
             <Flex direction='column' gap='5' justify='center' align='center' w='7em' p='3em'>
                 <Icon color='#1F50FF' w='2.5em' h='2em' as={MdExplore} />
                 <Spacer />
