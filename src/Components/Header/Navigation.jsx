@@ -16,7 +16,7 @@ import { GiNetworkBars } from "react-icons/gi"
 
 export function SideBar() {
     return (
-        <Box position='sticky'>
+        <Box position='fixed' top='4em' >
             <Flex direction='column' gap='5' justify='center' align='center' w='7em' p='3em'>
                 <Icon color='#1F50FF' w='2.5em' h='2em' as={MdExplore} />
                 <Spacer />
@@ -37,7 +37,7 @@ export function SideBar() {
 
 export default function Navigation() {
     return (
-        <Box>
+        <Box position='fixed' top='0' right='0' left='0' bgColor='white'>
             <UnorderedList listStyleType='none'>
                 <Flex align='center' justify='space-between' p='1em'>
                     <ListItem>
