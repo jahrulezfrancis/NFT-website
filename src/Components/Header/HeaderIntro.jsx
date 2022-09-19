@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, HStack, VStack, Image, Stack, Flex, Button } from '@chakra-ui/react';
+import { Box, Heading, HStack, VStack, Image, Stack, Flex, Button, useMediaQuery } from '@chakra-ui/react';
 import Asset1 from "../Assests/Images/col1.png"
 import Asset2 from "../Assests/Images/col2.png"
 import Asset3 from "../Assests/Images/col3.png"
@@ -12,16 +12,17 @@ import HeaderArt from "../Assests/Images/Art.png"
 
 
 export default function HeaderWelcome() {
+    const [onMobile] = useMediaQuery('(max-width: 1000px)')
     return (
         <Stack>
-            <Box bgColor='#6F75F7' h='20em' borderRadius='3em' display='flex' justifyContent='center' ml='8em' mt='8em'>
+            <Box bgColor='#6F75F7' h='20em' borderRadius='3em' display='flex' justifyContent='center' ml={ onMobile ? '0em' : '8em'} p='.5em' mt='8em'>
                 <HStack justify='start'>
                     <VStack p='3em' textAlign='start' spacing='2em'>
                         <Heading textAlign='start' fontSize='2em' fontWeight='700' lineHeight='1.5em' color='white' fontFamily='Manrope'>
                             Popular and affordable <br />
                             collections
                         </Heading>
-                        <HStack w='100%' justify='cente' align='start'>
+                        <HStack w='100%' justify='cente' align='start' pb={onMobile ? '1em' : '0em'}>
                             <Image src={Asset1} alt='' />
                             <Image src={Asset2} alt='' />
                             <Image src={Asset3} alt='' />
