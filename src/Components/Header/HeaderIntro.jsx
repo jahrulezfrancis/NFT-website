@@ -6,6 +6,7 @@ import Asset3 from "../Assests/Images/col3.png"
 import Asset4 from "../Assests/Images/col4.png"
 import Asset5 from "../Assests/Images/col5.png"
 
+
 import HeaderArt from "../Assests/Images/Art.png"
 
 
@@ -13,7 +14,7 @@ import HeaderArt from "../Assests/Images/Art.png"
 export default function HeaderWelcome() {
     return (
         <Stack>
-            <Box bgColor='#6F75F7' h='20em' borderRadius='3em' display='flex' justifyContent='center' m={2}>
+            <Box bgColor='#6F75F7' h='20em' borderRadius='3em' display='flex' justifyContent='center' ml='8em' mt='8em'>
                 <HStack justify='start'>
                     <VStack p='3em' textAlign='start' spacing='2em'>
                         <Heading textAlign='start' fontSize='2em' fontWeight='700' lineHeight='1.5em' color='white' fontFamily='Manrope'>
@@ -35,7 +36,7 @@ export default function HeaderWelcome() {
                 </HStack>
             </Box>
             <Stack justify='center' align='center' mt='-10em' w='auto'>
-                <Button _hover={{bgColor: "#6F75F7"}} mt='-2.5em' borderRadius='2em' color='white' bgColor='black' w='8em' h='3em'>See Offers</Button>
+                <Button alignSelf='center' _hover={{bgColor: "#6F75F7"}} mt='-2.5em' borderRadius='2em' color='white' bgColor='black' w='8em' h='3em'>See Offers</Button>
             </Stack>
         </Stack>
     )
